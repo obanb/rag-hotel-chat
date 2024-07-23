@@ -102,7 +102,7 @@ export const ragChat = async() => {
         chat: async (prompt: string) => {
             ctx.push({
                 role: 'system',
-                content: 'jsi nápomocný chatbot komunikující hotelové informace (pokoje, rezervace, okolí hotelu..), odpovídej v češtině'
+                content: 'You are a helpful chatbot communicating hotel information (rooms, reservations, hotel surroundings...'
             })
 
             let relevantMetadata: string | null = null
@@ -231,10 +231,10 @@ export const ragChat = async() => {
 const getBookingStatus = async(coll: Collection, bookingId: string) => {
     console.log(bookingId)
     const res = await coll.findOne({"data.id":bookingId})
-    return JSON.stringify({...res, error: false, errors: []})|| "Rezervace s tímto číslem nenalezena."
+    return JSON.stringify({...res, error: false, errors: []})|| "Reservation not found."
 }
 const getDate = () => new Date()
 const sendEmailToReception = (content: string) => {
-    console.log(`sending email to reception  recepce.pyramida@orea.cz - content ${content}, pokoj 633494087`)
+    console.log(`sending email to reception - content ${content}`)
     return 'Email byl odeslán'
 }
