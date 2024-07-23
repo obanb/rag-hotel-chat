@@ -9,6 +9,7 @@
 
 ### How it works
 
+- load JSON sources > Pinecone index & vector store > prompt > get Pinecone similarity search > enrich context > OpenAI 1st call > Function Calling > enrich context > OpenAI 2nd call > response
 - JSON data are converted to OpenAI embeddings (to vectors) on first run
 - then they are stored in the Pinecone index together with the metadata
 - the application then creates a Pinecone vector store from the existing index for querying the data
