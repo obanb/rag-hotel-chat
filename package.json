@@ -1,0 +1,52 @@
+{
+  "name": "open_ai_basic",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "tsc && node --trace-warnings --enable-source-maps -r dotenv/config dist/index.js",
+    "basics": "node -r ts-node/register -r dotenv/config src/basics.ts",
+    "basicChat": "node -r ts-node/register -r dotenv/config src/basic_chat.ts",
+    "openAiTools": "node -r ts-node/register -r dotenv/config src/open_ai_tools.ts",
+    "embeddings": "node -r ts-node/register -r dotenv/config src/embeddings.ts",
+    "embeddingSimilarity": "node -r ts-node/register -r dotenv/config src/embeddingSimilarity.ts",
+    "moviesRec": "node -r ts-node/register -r dotenv/config src/movieRec.ts",
+    "chromadb": "node -r ts-node/register -r dotenv/config src/chroma.ts",
+    "chromatest": "node -r ts-node/register -r dotenv/config src/chroma.ts",
+    "relevantInfo": "node -r ts-node/register -r dotenv/config src/relevantInfoApp.ts",
+    "pinecone": "node -r ts-node/register -r dotenv/config src/pinecone.ts",
+    "pineconeRel": "node -r ts-node/register -r dotenv/config src/pineconeRelevantInfo.ts",
+    "langchain": "node -r ts-node/register -r dotenv/config src/langchain.ts",
+    "langchainModel": "node -r ts-node/register -r dotenv/config src/langchainModel.ts",
+    "langchainParser": "node -r ts-node/register -r dotenv/config src/langchainParser.ts",
+    "langchainTemplates": "node -r ts-node/register -r dotenv/config src/langchainTemplates.ts",
+    "ragBasic": "node -r ts-node/register -r dotenv/config src/ragBasic.ts",
+    "ragChromaPdf": "node -r ts-node/register -r dotenv/config src/ragChromaPdf.ts",
+    "ragPdf": "node -r ts-node/register -r dotenv/config src/ragPdf.ts",
+    "ragWeb": "node -r ts-node/register -r dotenv/config src/ragWeb.ts",
+    "hotels": "node -r ts-node/register -r dotenv/config src/hotels.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@langchain/pinecone": "^0.0.7",
+    "@pinecone-database/pinecone": "^2.2.2",
+    "@types/express": "^4.17.21",
+    "cheerio": "^1.0.0-rc.12",
+    "chromadb": "^1.8.1",
+    "dotenv": "16.0.3",
+    "express": "^4.19.2",
+    "langchain": "^0.1.37",
+    "openai": "^4.25.0",
+    "pdf-parse": "^1.1.1",
+    "tiktoken": "^1.0.11",
+    "mongodb": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
