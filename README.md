@@ -9,7 +9,7 @@
 
 ### How it works
 
-- JSON data is converted to OpenAI embeddings (to vectors) on first run
+- JSON data are converted to OpenAI embeddings (to vectors) on first run
 - then they are stored in the Pinecone index together with the metadata
 - the application then creates a Pinecone vector store from the existing index for querying the data
 - when the user sends a prompt to the application, the application first tries to query the "local" vector store data and enrich the context with it
